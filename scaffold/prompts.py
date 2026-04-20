@@ -16,7 +16,7 @@ def collect() -> ScaffoldConfig:
         default="home"
     ).ask()
 
-    extra_blueprint = []
+    extra_blueprints = []
     add_more = questionary.confirm(
         "Add additional blueprints?",
         default=False
@@ -31,11 +31,11 @@ def collect() -> ScaffoldConfig:
             name = questionary.text(
                 f"Blueprint {i + 1} name:"
             ).ask()
-            extra_blueprint.append(name)
+            extra_blueprints.append(name)
 
     return ScaffoldConfig(
         project_name=project_name,
         include_auth=include_auth,
         blueprint_name=blueprint_name,
-        extra_blueprint=extra_blueprint,
+        extra_blueprints=extra_blueprints,
     )
