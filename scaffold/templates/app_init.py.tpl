@@ -28,7 +28,7 @@ def create_app(config_object=None):
 
     # register blueprints
     from app.blueprints.{{blueprint_name}} import {{blueprint_name}}_bp
-    app.register_blueprint({{blueprint_name}}_bp
+    app.register_blueprint({{blueprint_name}}_bp)
 
     # Registers an authentication blueprint if user choose to have auth
     {% if include_auth %}
