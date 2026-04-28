@@ -2,13 +2,13 @@ import subprocess
 from pathlib import Path
 from scaffold.config import ScaffoldConfig
 
-Deps = [
+DEPS = [
     "flask",
     "flask-restful",
     "flask-sqlalchemy",
     "flask-migrate",
     "python-dotenv",
-}
+]
 
 AUTH_DEPS = [
     "flask-jwt-extended",
