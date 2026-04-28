@@ -25,7 +25,7 @@ def collect() -> ScaffoldConfig:
     if add_more:
         count = int(questionary.text(
             "How many?",
-        ).ask()
+        ).ask())
 
         for i in range(count):
             name = questionary.text(
