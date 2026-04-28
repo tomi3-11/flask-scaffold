@@ -33,7 +33,7 @@ def generate(config: ScaffoldConfig):
     write(root / ".env", render("env.tpl", ctx))
     write(root / ".env.example", render("env.example.tpl", ctx))
     write(root / ".gitignore", render("gitignore.tpl", ctx))
-    write(root / "README.md", f'# {config.project_name}\n)
+    write(root / "README.md", f'# {config.project_name}\n')
 
     # app
     write(root / "app" / "__init__.py", render("app_init.py.tpl", ctx))
@@ -58,9 +58,9 @@ def generate(config: ScaffoldConfig):
         write(root / "app" / "blueprints" / "auth" / "__init__.py", render("auth_init.py.tpl", ctx))
         write(root / "app" / "blueprints" / "auth" / "routes.py", render("auth_routes.py.tpl", ctx))
         write(root / "app" / "blueprints" / "auth" / "resources.py", render("auth_resources.py.tpl", ctx))
-        write(root / "app" / "blueprints" / "auth" / "services.py", render("auth_services.py.tpl", {"blueprint_name": ctx))
+        write(root / "app" / "blueprints" / "auth" / "services.py", render("auth_services.py.tpl", ctx))
 
     # tests
-    write(root / "tests" / "conftest.py", render("conftest.py.tpl", ctx)
+    write(root / "tests" / "conftest.py", render("conftest.py.tpl", ctx))
 
     print(f" Project structure created")
