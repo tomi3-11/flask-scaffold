@@ -1,5 +1,5 @@
 import sys
-from scaffold.prompt import collect
+from scaffold.prompts import collect
 from scaffold.generator import generate
 from scaffold.installer import install
 
@@ -14,5 +14,5 @@ def main():
     print(f"\n{config.project_name} ready. Do this: \ncd {config.project_name} \nflask run")
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     main()
